@@ -241,7 +241,7 @@ input[name="portfolio__tabs__item"] {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 860px;
-    height: 780px;
+    height: 90%;
     background: #fff;
     z-index: 9999;
 }

@@ -67,10 +67,10 @@
 /* <============================ inner ===========================> */
 .header-footer__inner {
     margin: 0 auto;
-    width: 1280px;
+    width: 1080px;
 }
 .inside__inner {
-    width: 1280px;
+    width: 1080px;
     margin: 0 auto;
 }
 /* <============================ motion ===========================> */
@@ -227,7 +227,7 @@ header .header-footer__inner {
     }
 /* <============================ footer ===========================> */
 footer .header-footer__inner {
-    width: 1280px;
+    width: 1080px;
     border-top: 1px solid var(--gray-color);
     color: var(--gray-color);
     display: flex;
