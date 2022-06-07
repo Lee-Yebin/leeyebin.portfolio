@@ -1,0 +1,292 @@
+@charset "utf-8";
+@import url(./common.css);
+@import url(./reset.css);
+/* <============================ header ===========================> */
+.main-page__gnb__menu:nth-child(3):after {
+    display: block;
+}
+/* <!-- <============================ slider ===========================>  --> */
+.portfolio__web-coding__item {
+    position: relative;
+    margin-top: 120px;
+    height: 600px;
+}
+.portfolio__web-coding__item__desc {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+.portfolio__web-coding__item__desc h2 {
+    transform: translateY(-50%);
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.534);
+    text-align: center;
+    z-index: 1;
+}
+
+.portfolio__web-coding__view__wrap {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
+}
+.portfolio__web-coding__view {
+    background: var(--blue-color);
+    display: inline-block;
+    color: #fff;
+    font-size: var(--small-font-size);
+    padding: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.portfolio__web-coding__view:hover {
+    background: var(--dark-blue-color);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.555);
+}
+.portfolio__web-coding__view:active {
+    background: var(--blue-color);
+    box-shadow: none;
+}
+.portfolio__web-coding__photo {
+    z-index: -999;
+}
+.portfolio__web-coding__photo img {
+    width: 100%;
+}
+/* <!-- <============================ slider > dots button ===========================>  --> */
+.slick-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+}
+.slick-dots {
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+    display: flex;
+    cursor: pointer;
+}
+.slick-dots button {
+    width: 10px;
+    height: 10px;
+    font-size: 0;
+    border-radius: 50%;
+    margin-left: .5rem;
+    background: rgb(187, 187, 187);
+    display: inline-block;
+}
+.slick-dots li:nth-child(1) {
+    margin-left: 0;
+}
+.slick-dots li.slick-active button {
+    background: var(--blue-color);
+}
+/* <!-- <============================ portfolio__tabs ===========================>  --> */
+.portfolio__tabs__wrap {
+    /* height: 950px; */
+    margin-top: 100px;
+}
+.portfolio__tabs {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.329);
+    /* position: relative; */
+    height: 100%;
+    /* height: 900px; */
+    margin-bottom: 5rem;
+}
+/* <!-- <============================ tab 관련 css ===========================>  --> */
+.portfolio__tabs__item {
+    width: calc(100%/3);
+    height: 50px;
+    background-color: var(--blue-color);
+    line-height: 52px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    display: block;
+    float: left;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.portfolio__tabs__item:hover {
+    background: var(--dark-blue-color);
+}
+/* <!-- <============================ 선택된 tab(공통 effect) ===========================>  --> */
+#web-design:checked ~ #web-design__content,
+#content-design:checked ~ #content-design__content,
+#image-design:checked ~ #image-design__content {
+    display: block;
+}
+/* <!-- <============================ radio button delete ===========================>  --> */
+input[name="portfolio__tabs__item"] {
+    display: none;
+}
+/* <!-- <============================ 선택된 탭 스타일 ===========================>  --> */
+.portfolio__tabs input:checked + .portfolio__tabs__item {
+    background-color: #fff;
+    font-weight: bold;
+    color: var(--blue-color);
+}
+/* <!-- <============================ tab cotent ===========================>  --> */
+.tabs__content {
+    display: none;
+    clear: both;
+    overflow: hidden;
+}
+.design__wrap__content .cover {
+    margin: .6rem .5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.design__wrap__content__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
+.design__wrap__content__photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    height: 100%;
+    
+}
+.design__wrap__content .cover::after {
+    content: '';
+    background: var(--blue-color);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 98;
+    opacity: 0;
+    transition: 500ms;
+    clear: both;
+    display: block;
+}
+.design__wrap__content .cover:hover::after {
+    opacity: .6;
+}
+.design__wrap__content .cover:hover .design__wrap__content__desc {
+    opacity: 1;
+}
+.design__wrap__content__desc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    font-size: 1rem;
+    z-index: 99;
+    color: #fff;
+    opacity: 0;
+    transition: 500ms;
+}
+.design__wrap__content__desc h2 {
+    font-size: var(--big-font-size);
+    line-height: 30px;
+}
+.design__wrap__content__explanation {
+    margin-bottom: 15px;
+}
+.design__wrap__more {
+    border: 1px solid #fff;
+    display: inline-block;
+    font-size: var(--small-font-size);
+    padding: .5rem 1rem .5rem 1rem;
+    cursor: pointer;
+}
+.design__wrap__more:hover {
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.514);
+    font-weight: bold;
+}
+.design__wrap__more:active {
+    font-weight: normal;
+    box-shadow: none;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.modalBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 860px;
+    height: 780px;
+    background: #fff;
+    z-index: 9999;
+}
+.modal__photo::-webkit-scrollbar {
+    display: none; 
+}
+.modal__photo {
+    overflow-y: scroll;
+    --ms-overflow-style: none;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+.modalBox img {
+    width: 100%;
+    z-index: 999;
+}
+.modalBox button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+    border: none;
+    right: 5px;
+    transform: translate(-50%, 50%);
+    font-size: 1rem;
+    background-color: rgb(139, 138, 138);
+    box-shadow: 1px 2px 8px rgba(44, 44, 44, 0.459);
+    color: #fff;
+    font-weight: bold;
+    z-index: 9999;
+}
+.modalBox button:hover {
+    background-color: rgb(117, 117, 117);
+}
+.modalBox button:active {
+    background-color: rgb(139, 138, 138);
+}
+.modal__photo  video {
+    position: absolute;
+    top: 15%;
+    left: 3%;
+}
+    .hidden {
+        display: none;
+}

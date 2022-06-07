@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import url(./reset.css);
+@import url(./common.css);
+/* <============================ fullpage > movement button(right position)  ===========================> */
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: var(--blue-color) !important;
+}
+/* <============================ header ===========================> */
+.main-page__gnb__menu:nth-child(1):after {
+    display: block;
+}
+/* <============================ intro ===========================> */
+.intro {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+    height: 100vh;
+}
+.intro__txt-move {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(0,-50%);
+    /* line-height: 70px; */
+    font-size: var(--very-big-font-size);
+}
+/* cursor animation */
+#text {
+    display: inline;
+    vertical-align: middle;
+    height: 50px;
+    color: var(--blue-color);
+    border-right: .05em solid var(--blue-color);
+    animation: cursor 0.5s ease infinite;
+}
+@keyframes cursor {
+    50%{
+        border-color: transparent;
+    }
+}
+/* <============================ challenge /  cooperation / conviction 공통 effect ===========================> */
+.challenge .inside__inner, 
+.cooperation .inside__inner, 
+.conviction .inside__inner {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.challenge__title,
+.cooperation__title,
+.conviction__title {
+    color: var(--blue-color);
+    font-size: var(--big-font-size);
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.challenge__text,
+.cooperation__text,
+.conviction__text {
+    font-size: var(--normal-font-size);
+    line-height: 30px;
+}
+/* <============================ challenge ===========================> */
+.challenge__desc {
+    margin-bottom: -100px;
+}
+.challenge__button {
+    background: var(--blue-color);
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-top: 25px;
+    border: none;
+    font-family: var(--body-font);
+}
+.challenge__photo {
+    width: 50%;
+}
+/* <============================ cooperation ===========================> */
+.cooperation__desc {
+    margin-top: 90px;
+    margin-left: 2rem;
+}
+.cooperation__photo {
+    width: 50%;
+    cursor: pointer;
+}
+/* <============================ conviction ===========================> */
+.conviction__desc {
+    margin-top: 120px;
+}
+.conviction__photo {
+    width: 50%;
+    position: relative;
+}
+.conviction__photo::after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background: yellow;
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    border-radius: 50%;
+    z-index: -9;
+    filter: blur(20px);
+    animation: opacity-ani 2s linear 0s infinite alternate; margin-top: 0;
+}
+@keyframes opacity-ani {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/* <============================ contact ===========================> */
+.contact .inside__inner {
+    display: flex; 
+    justify-content: center;
+    text-align: center; 
+}
+.contact__title {
+    font-size: var(--very-big-font-size);
+    color: var(--blue-color);
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.contact__text {
+    font-size: var(--very-normal-font-size);
+    color: var(--gray-color);
+}
+.contact__info__click-there {
+    position: relative;
+}
+.contact__info__click-there img {
+    position: absolute;
+    left: -37px;
+    top: -30px;
+}
+/* <============================ contact__info ===========================> */
+.contact__info__click__button {
+    color: #fff;
+    background: var(--blue-color);
+    padding: .3rem;
+    font-family: 'NanumSquareRound';
+    margin-right: .2rem;
+}
+.contact__info__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 59, 59, 0.185);
+    z-index: 999;
+}
+.cotact__info__modal {
+    width: 400px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: .5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+.cotact__info__modal__content {
+    padding: 1rem;
+}
+.cotact__info__modal__content h1 {
+    font-size: var(--normal-font-size);
+    color: var(--blue-color);
+    margin-bottom: .7rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid var(--blue-color);
+}
+.cotact__info__modal__content p {
+    font-size: 1rem;
+}
+.cotact__info__modal img {
+    width: 150px;
+}
+.cotact__info__close__modal {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding-bottom: 4px;
+    color: var(--blue-color);
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+.contact__icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    color: var(--blue-color);
+}
+.contact__icon__item {
+    margin-right: 1.5rem;
+    width: 100%;
+}
+.contact__icon__item:nth-child(3) {
+    margin-right: 0;
+}
+.contact__icon__item i {
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    font-size: var(--very-big-font-size);
+}
+.contact__icon__item div {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    opacity: 0;
+    transition: 300ms;
+}
+.contact__icon__item:hover div {
+    opacity: 1;
+    cursor: pointer;
+}

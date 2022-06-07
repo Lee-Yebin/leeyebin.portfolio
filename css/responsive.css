@@ -1,0 +1,415 @@
+@charset "utf-8";
+@media (max-width: 1440px) {
+    .header-footer__inner {
+        width: 1300px;
+    }
+    .inside__inner {
+        width: 1200px;
+    }
+}
+@media (max-width: 1024px) {
+    :root {
+    /* font */
+    --body-font: 'NanumSquareRound';
+    --very-big-font-size: 2.5rem;
+    --big-font-size: 1.75rem;
+    --gnb-font-size: 1.35rem;
+    --very-normal-font-size: 1.35rem;
+    --normal-font-size: 1.1rem;
+    --small-font-size: .813rem;
+    }
+    .inside__inner {
+        width: 900px;
+    }
+    .header-footer__inner {
+        width: 850px;
+    }
+    footer .header-footer__inner {
+        width: 920px;
+    }
+    .challenge__desc {
+        width: 50%;
+        margin-right: 2rem;
+    }
+    .challenge__title {
+        /* font-size: var(--small-font-size); */
+    }
+    .challenge__text,
+    .cooperation__text,
+    .conviction__text {
+
+        line-height: 25px;
+    }
+    .contact .inside__inner {
+        margin-top: 80px;
+    }
+    /* about */
+    .profile__photo {
+        bottom: 25%;
+    }
+    /* portfolio */
+    .modalBox {
+        width: 750px;
+        height: 600px;
+    }
+}
+@media (max-width: 768px) {
+:root {
+    /* font */
+    --body-font: 'NanumSquareRound';
+    --very-big-font-size: 2rem;
+    --big-font-size: 1.5rem;
+    --gnb-font-size: 1.2rem;
+    --very-normal-font-size: 1.1rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .8rem;
+    }
+    .header-footer__inner {
+        width: 664px;
+    }
+    .inside__inner {
+        width: 664px;
+    }
+.cover {
+    margin: .5rem;
+}
+.motion {
+    animation: none;
+}
+    /* grid tablet system */
+.l-grid-tablet-1-12 { width: 8.33333333%; }
+.l-grid-tablet-2-12 { width: 16.66666667%; }
+.l-grid-tablet-3-12 { width: 25%; }
+.l-grid-tablet-4-12 { width: 33.33333333%; }
+.l-grid-tablet-5-12 { width: 41.66666667%; }
+.l-grid-tablet-6-12 { width: 50%; }
+.l-grid-tablet-7-12 { width: 58.33333333%; }
+.l-grid-tablet-8-12 { width: 66.66666667%; }
+.l-grid-tablet-9-12 { width: 75%; }
+.l-grid-tablet-10-12 { width: 83.33333333%; }
+.l-grid-tablet-11-12 { width: 91.66666667%; }
+.l-grid-tablet-12-12 { width: 100%;}
+/* header */
+.main-page__logo img {
+    width: 60%;
+
+}
+.main-page__gnb {
+    display: none;
+    clear: both;
+    /* float: none; */
+}
+.main-page__gnb__menu {
+    margin-right: 20px;
+    right: 20px;
+
+}
+.main-page__gnb__menu::after {
+    height: 2px;
+}
+.main-page__gnb.active {
+    display: block;
+}
+.btn-toggle {
+    display: block;
+}
+/* footer */
+footer .header-footer__inner {
+    /* background: #000; */
+    width: 664px;
+    font-size: .75rem;
+}
+.made-in-Leeyebin {
+    font-size: .75rem;
+}
+/* about */
+.profile__photo {
+    padding-top: 200px;
+    position: inherit;
+}
+.profile__photo img:nth-child(1) {
+    display: block;
+}
+.profile__photo img:nth-child(2) {
+    display: none;
+}
+
+.profile__qualification__wrap, 
+.profile__certificate__Wrap {
+    width: 100%;
+    align-items: center;
+    /* flex: calc(100%/3); */
+}
+.profile__info__wrap {
+    /* text-align: center; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.profile__desc__wrap {
+    padding-left: 0;
+}
+/* challenge */
+.challenge .inside__inner, 
+.conviction .inside__inner {
+    /* flex-wrap: wrap-reverse; */
+    /* width: 100%; */
+    justify-content: center;
+    flex-direction: column-reverse;
+    /* align-items:flex-end; */
+}
+.cooperation .inside__inner {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.challenge__photo,
+.cooperation__photo,
+.conviction__photo  {
+    width: 60%;
+}
+.challenge__desc {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 0;
+}
+.challenge__button-wrap {
+    display: flex;
+    justify-content: center;
+}
+.challenge__button {
+    width: 90px;
+    height: 90px;
+    font-size: var(--small-font-size);
+}
+.challenge__button:nth-child(3) {
+    margin-right: 0;
+}
+.cooperation__desc {
+margin-top: 15px;
+margin-left: 0;
+text-align: center;
+}
+.conviction__desc {
+margin-top: 25px;
+text-align: center;
+
+}
+.conviction__photo::after {
+    width: 30px;
+    height: 30px;
+}
+.profile__qualification__subject,
+.profile__certificate__subject {
+    text-align: center;
+    background: var(--blue-color);
+    color: #fff;
+    padding: .3rem 0 .3rem 0;
+    margin-bottom: 1rem;
+}
+.profile__qualification__item, 
+.profile__certificate__item {
+    width: 33.333%;
+    text-align: center;
+}
+.profile__qualification__item {
+    margin-bottom: .75rem;
+}
+/* skills */
+.skills .skills__subject {
+    padding: .3rem;
+}
+/* portfolio */
+/* tab 관련 css */
+.aspiration__title {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.aspiration__photo {
+    width: 100%;
+}
+.aspiration__desc {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0;
+}
+/* portfolio */
+.modalBox {
+    width: 660px;
+    height: 500px;
+}
+}
+
+@media (max-width: 510px) {
+:root {
+    /* font */
+    --body-font: 'NanumSquareRound';
+    --very-big-font-size: 1.5rem;
+    --big-font-size: 1.2rem;
+    --gnb-font-size: 1.1rem;
+    --very-normal-font-size: 1rem;
+    --normal-font-size: .8rem;
+    --small-font-size: .65rem;
+}
+/* grid tablet system */
+.l-grid-tablet-1-12 { width: 8.33333333%; }
+.l-grid-tablet-2-12 { width: 16.66666667%; }
+.l-grid-tablet-3-12 { width: 25%; }
+.l-grid-tablet-4-12 { width: 33.33333333%; }
+.l-grid-tablet-5-12 { width: 41.66666667%; }
+.l-grid-tablet-6-12 { width: 50%; }
+.l-grid-tablet-7-12 { width: 58.33333333%; }
+.l-grid-tablet-8-12 { width: 66.66666667%; }
+.l-grid-tablet-9-12 { width: 75%; }
+.l-grid-tablet-10-12 { width: 83.33333333%; }
+.l-grid-tablet-11-12 { width: 91.66666667%; }
+.l-grid-tablet-12-12 { width: 100%;
+}
+.header-footer__inner {
+    width: 430px;
+}
+.inside__inner {
+    width: 430px;
+}
+/* header */
+.main-page__logo img {
+    width: 60%;
+
+}
+.main-page__gnb {
+    display: none;
+    background: #fff;
+    clear: both;
+    bottom: -24px;
+    width: 100%;
+    text-align: right;
+}
+.main-page__gnb__menu {
+    margin-right: 20px;
+
+}
+.main-page__gnb__menu::after {
+    height: 2px;
+}
+.main-page__gnb.active {
+    display: block;
+}
+.btn-toggle {
+    display: block;
+}
+}
+@media (max-width: 480px) {
+:root {
+    /* font */
+    --body-font: 'NanumSquareRound';
+    --very-big-font-size: 1.5rem;
+    --big-font-size: 1.2rem;
+    --gnb-font-size: 1.1rem;
+    --very-normal-font-size: 1rem;
+    --normal-font-size: .8rem;
+    --small-font-size: .65rem;
+}
+.cover {
+    margin: .2rem;
+}
+    /* grid mobile system */
+.l-grid-mobile-1-12 { width: 8.33333333%; }
+.l-grid-mobile-2-12 { width: 16.66666667%; }
+.l-grid-mobile-3-12 { width: 25%; }
+.l-grid-mobile-4-12 { width: 33.33333333%; }
+.l-grid-mobile-5-12 { width: 41.66666667%; }
+.l-grid-mobile-6-12 { width: 50%; }
+.l-grid-mobile-7-12 { width: 58.33333333%; }
+.l-grid-mobile-8-12 { width: 66.66666667%; }
+.l-grid-mobile-9-12 { width: 75%; }
+.l-grid-mobile-10-12 { width: 83.33333333%; }
+.l-grid-mobile-11-12 { width: 91.66666667%; }
+.l-grid-mobile-12-12 { width: 100%;}
+/* inner */
+.inside__inner {
+    width: 376px;
+}
+.header-footer__inner {
+    width: 376px;
+}
+footer .header-footer__inner {
+    width: 376px;
+}
+/* header */
+.main-page__logo img {
+    width: 60%;
+
+}
+.main-page__gnb {
+    display: none;
+    background: #fff;
+    clear: both;
+    bottom: -24px;
+    width: 100%;
+    text-align: right;
+}
+.main-page__gnb__menu {
+    margin-right: 20px;
+
+}
+.main-page__gnb__menu::after {
+    height: 2px;
+}
+.main-page__gnb.active {
+    display: block;
+}
+.btn-toggle {
+    display: block;
+}
+/* intro */
+.intro {
+    width: 60%;
+}
+/* cooperation */
+.challenge__photo, 
+.cooperation__photo, 
+.conviction__photo {
+    width: 100%;
+}
+/* about */
+/* profile */
+.profile__photo {
+    padding-top: 0px;
+    bottom: 0;
+}
+.profile__info__wrap {
+    position: inherit;
+    margin-bottom: 30px;
+}
+.profile__desc__wrap {
+    position: inherit;
+    margin-top: 20px;
+    bottom: 0;
+}
+.profile .inside__inner {
+    height: auto;
+}
+.profile__qualification__item, 
+.profile__certificate__item {
+    width: 50%;
+}
+.profile__qualification__desc {
+    font-size: .65rem;
+}
+/* skill */
+.skills__list {
+    flex-wrap: wrap;
+}
+/* portfolio */
+.portfolio__tabs__item {
+    width: 100%;
+}
+/* portfolio */
+.modalBox {
+    width: 400px;
+    height: 550px;
+}
+}

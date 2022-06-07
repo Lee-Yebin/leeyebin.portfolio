@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- pavicon -->
+<link href="./img/pavicon/favi.png" rel="shortcut icon" type="image/x-icon">
+<!-- index.css -->
+<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/responsive.css">
+<!-- icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<!-- full page.css -->
+<link rel="stylesheet" href="./plug-in/full-page-js/fullpage.min.css">
+<!-- full page.js -->
+<script src="./plug-in/full-page-js/fullpage.min.js"></script>
+<!-- jQuery.js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<title>LEE YEBIN | PORTFOLIO</title>
+</head>
+<body>
+    <!-- <============================ header ===========================>  -->
+    <header>
+        <div class="header-footer__inner">
+            <div class="main-page__logo"><a href="./index.html#page-1">
+                <img src="./img/gnb/logo-blue.png" alt="이예빈 포트폴리오의 로고입니다." title="main-logo">
+            </a></div>
+            <ul class="main-page__gnb">
+                <li class="main-page__gnb__menu"><a href="./index.html#page-1">
+                    Intro
+                </a></li>
+                <li class="main-page__gnb__menu"><a href="./pages/about.html">
+                    About
+                </a></li>
+                <li class="main-page__gnb__menu"><a href="./pages/portfolio.html">
+                    Portfolio
+                </a></li>
+                <li class="main-page__gnb__menu "><a href="#page-5">
+                    Contact
+                </a></li>
+            </ul>
+            <div class="btn-toggle" onclick="handleToggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <div id="full-page">
+        <!-- <============================ intro ===========================>  -->
+        <div class="section">
+            <div class="inside__inner">
+                <div class="intro">
+                    <h1 class="intro__txt-move">
+                        <div id="text"></div>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <!-- <============================ challenge ===========================>  -->
+        <div class="section challenge">
+            <div class="inside__inner">
+                <div class="challenge__desc">
+                    <h2 class="challenge__title">
+                        태풍이 휘몰아쳐도
+                        끊임없이 나아가다
+                    </h2>
+                    <p class="challenge__text">
+                        처음부터 디자인의 꿈이 있었던 건 아닙니다. <br>
+                        다양한 도전을 통해 다져진 도전정신과 강인함으로 <br>
+                        디자인의 꿈을 향해 나아가겠습니다.
+                    </p>
+                    <div class="challenge__button-wrap">
+                        <input id="firstChallengeButton" class="challenge__button" type="button" value="1 Challenge" onclick="
+                            if(document.querySelector('#firstChallengeButton').value === '1 Challenge'){
+                                document.querySelector('#firstChallengeButton').value = '회계'
+                                document.querySelector('#firstChallengeButton').style.backgroundColor = '#fff'; style.color = 'var(--blue-color)'; style.border = '2px solid var(--blue-color)'
+                            }else{
+                                document.querySelector('#firstChallengeButton').value = '1 Challenge'
+                                document.querySelector('#firstChallengeButton').style.backgroundColor = 'var(--blue-color)'; style.color = '#fff';
+                            }">
+                        <input id="secondChallengeButton" class="challenge__button" type="button" value="2 Challenge" onclick="
+                            if(document.querySelector('#secondChallengeButton').value === '2 Challenge'){
+                                document.querySelector('#secondChallengeButton').value = '사업관리'
+                                document.querySelector('#secondChallengeButton').style.backgroundColor = '#fff'; style.color = 'var(--blue-color)'; style.border = '2px solid var(--blue-color)'; style.fontWeight = 'bold';
+                            }else{
+                                document.querySelector('#secondChallengeButton').value = '2 Challenge'
+                                document.querySelector('#secondChallengeButton').style.backgroundColor = 'var(--blue-color)'; style.color = '#fff';
+                            }">
+                        <input id="thirdChallengeButton" class="challenge__button" type="button" value="3 Challenge" onclick="
+                            if(document.querySelector('#thirdChallengeButton').value === '3 Challenge'){
+                                document.querySelector('#thirdChallengeButton').value = '디자인'
+                                document.querySelector('#thirdChallengeButton').style.backgroundColor = '#fff'; style.color = 'var(--blue-color)'; style.border = '2px solid var(--blue-color)'; style.fontWeight = 'bold';
+                            }else{
+                                document.querySelector('#thirdChallengeButton').value = '3 Challenge'
+                                document.querySelector('#thirdChallengeButton').style.backgroundColor = 'var(--blue-color)'; style.color = '#fff';
+                            }">
+                    </div>
+                </div>
+                <div class="challenge__photo motion">
+                    <img src="./img/intro/challenge-page.png" alt="파도를 이겨내는 배입니다." title="challenge-ship">
+                </div>
+            </div>
+        </div>
+        <!-- <============================ cooperation ===========================>  -->
+        <div class="section cooperation">
+            <div class="inside__inner">
+                <div class="cooperation__photo  motion">
+                    <img id="cooperation__alone" src="./img/intro/cooperation-page__alone.png" style="width:100%;" alt="혼자 좌절하고 있습니다" title="cooperation-alone">
+                    <img id="cooperation__we" src="./img/intro/cooperation-page__we.png" style="width:100%;" alt="함께하면 해결할 수 있습니다" title="cooperation-we">  
+                </div>
+                <div class="cooperation__desc">
+                    <h2 class="cooperation__title">
+                        배는 혼자가 아닌
+                        우리가 이끌어간다
+                    </h2>
+                    <p class="cooperation__text">
+                        '함께 해야 비로소 빛을 볼 수 있다'라는 생각을 가지고 있습니다.  <br>
+                        항상 적극적이고 협력적인 자세로 업무를 수행하겠습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- <============================ conviction ===========================>  -->
+        <div class="section conviction">
+            <div class="inside__inner">
+                <div class="conviction__desc">
+                    <h2 class="conviction__title">
+                        나의 항해,
+                        종점은 디자인이다
+                    </h2>
+                    <p class="conviction__text">
+                        웹 디자인 공부를 통한 직무의 자신감과 끈기로 <br>
+                        웹 디자인이라는 도착점을 향해 나아가겠습니다.
+                    </p>
+                </div>
+                <div class="conviction__photo motion">
+                    <img src="./img/intro/conviction-page.png" alt="항해 종점에 도착했습니다." title="conviction-island">
+                </div>
+            </div>
+        </div>
+        <!-- <============================ contact ===========================>  -->
+        <div class="section contact">
+            <div class="inside__inner">
+                <div class="contact__desc">
+                    <h2 class="contact__title">Thank you :)</h2>
+                    <div class="contact__info__click-there">
+                        <img src="./img/intro/contact__mouse.png" alt="info modal에 들어가도록 유도하는 아이콘입니다." title="click-there">
+                    </div>
+                    <p class="contact__text">
+                        <button class="contact__info__click__button">이예빈</button>에 대해 더 알고 싶으신가요?
+                    </p>
+                    <!-- <============================ contact info modal page ===========================>  -->
+                    <div class="contact__info__overlay">
+                        <div class="cotact__info__modal">
+                            <div class="cotact__info__close__modal">
+                                x
+                            </div>
+                            <div class="cotact__info__modal__content">
+                                <h1>Info</h1>
+                                <p>
+                                    Name. 이예빈 <br>
+                                    Age. 25 <br>
+                                    Adress. 대구광역시 남구<br>
+                                    Phone. 010-6552-3304 <br>
+                                    E-Mail. leeyebin.green@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="contact__icons">
+                        <li class="contact__icon__item"><a href="./pdf/이력서_이예빈.pdf" target="_blank">
+                            <i class="far fa-file"></i>
+                            <div>
+                                이력서
+                            </div>
+                        </a></li>
+                        <li class="contact__icon__item"><a href="./pdf/포트폴리오 기획안.pdf" target="_blank">
+                            <i class="far fa-copy"></i>
+                            <div>
+                                포트폴리오 <br>
+                                기획안
+                            </div>
+                        </a></li>
+                        <li class="contact__icon__item"><a href="https://open.kakao.com/o/siaqU5je" target="_blank">
+                            <i class="far fa-comment"></i>
+                            <div>
+                                카카오톡
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <============================ fixed: top button ===========================>  -->
+    <div class="top__button"><a href="./index.html#page-1">
+        <i class="fas fa-chevron-up"></i>
+    </a></div>
+    <!-- <============================ javascript ===========================>  -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
